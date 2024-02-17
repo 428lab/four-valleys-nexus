@@ -6,7 +6,7 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib
-matplotlib.use('TKAgg')
+#matplotlib.use('TKAgg')
 
 
 import sys
@@ -24,9 +24,9 @@ from matplotlib.font_manager import FontProperties
 
 
 
-font_path = '/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf'
-font_prop = FontProperties(fname=font_path)
-matplotlib.rcParams['font.family'] = font_prop.get_name()
+#font_path = '/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf'
+#font_prop = FontProperties(fname=font_path)
+#matplotlib.rcParams['font.family'] = font_prop.get_name()
 
 import glob
 import pickle
@@ -50,7 +50,7 @@ class PlotMap:
 
         rows, cols = img.shape
         x = np.arange(cols)
-        y = np.arange(rows)
+        y = -np.arange(rows)
         z = img.copy()
 
         X, Y = np.meshgrid(x, y)
